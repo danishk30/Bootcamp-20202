@@ -19,6 +19,3 @@ jobs:
       run: npm install -g surge 
     - name: deploying using surge 
       run: surge ./ bootcapm2020.surge.sh --token $ {{secret.SURGE_TOKEN}}
-        docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
